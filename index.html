@@ -3,23 +3,29 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>by OkHiGuyS (@denherst tg)</title>
+	<title>ST-PR</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	<style>
 		body, html {
 			height: 100%;
 			margin:0;
 			display: flex;
 			justify-content: center;
+			flex-direction: column;
 			align-items: center;
-			background-color: #f0f0f0;
+			background-size: 100% 100%;
+			background-image: url('bg.jpg');
 		}
 		.button {
-			width: 75vw;
-			height: 75vw;
+			width: 50vw;
+			height: 50vw;
 			border-radius: 50%;
 			background-image: url('btn.png');
 			background-size: cover;
 			background-position: center;
+			background-color: rgba(255,255,255, 0.5);
 			cursor: pointer;
 			box-shadow: 0 4px 8px rgba(0,0,0, 0.2);
 			transition: transform 0.1s, box-shadow 0.1s;
@@ -28,10 +34,19 @@
 			transform: scale(0.95);
 			box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 		}
+		
+		h1 {
+            margin: 20px;
+            font-size: 30px;
+			font-family: "Roboto Condensed", sans-serif;
+            text-align: center;
+        }
 	</style>
 </head>
 
 <body>
+	<h1>@denherst tg</h1>
+	<!-- inspired from sountag website -->
 	<div class="button" id="soundButton"></div>
 	<audio id="audioPlayer" src="main.mp3"></audio>
 	<script>
