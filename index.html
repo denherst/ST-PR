@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>by OkHiGuyS (@denherst tg)</title>
+	<style>
+		body, html {
+			height: 100%;
+			margin:0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #f0f0f0;
+		}
+		.button {
+			width: 50vw;
+			height: 50vw;
+			border-radius: 50%;
+			background-image: url('btn.png');
+			background-size: cover;
+			background-position: center;
+			cursor: pointer;
+			box-shadow: 0 4px 8px rgba(0,0,0, 0.2);
+			transition: transform 0.1s, box-shadow 0.1s;
+		}
+		.button:active {
+			transform: scale(0.95);
+			box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="button" id="soundButton"></div>
+	<audio id="audioPlayer" src="main.mp3"></audio>
+	<script>
+		const button = document.getElementById('soundButton');
+		const audio = document.getElementById('audioPlayer');
+		button.addEventListener('click', function () {
+			audio.currentTime = 0;
+			audio.play();
+		});
+	</script>
+</body>
+</html>
